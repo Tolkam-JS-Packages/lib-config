@@ -89,7 +89,7 @@ class Configuration {
      *
      * @returns {unknown}
      */
-    public get(path?: string, def?: unknown): unknown {
+    public get<T = any>(path?: string, def?: any): T {
         const that = this;
         const { data, options } = that;
         const { strict } = options;
@@ -116,9 +116,9 @@ class Configuration {
      * @param path
      * @param def
      *
-     * @returns {unknown}
+     * @returns {T}
      */
-    public getEnv(path: string, def?: unknown): unknown {
+    public getEnv<T = any>(path: string, def?: any): T {
         const { environment, envNamespace, strictEnv, pathSeparator } = this.options;
         const fullPath = envNamespace ? envNamespace + pathSeparator + path : path;
 
