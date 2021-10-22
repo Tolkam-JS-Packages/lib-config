@@ -1,4 +1,4 @@
-import { objectMerge, isPlainObject, objectPath, objectDeepFreeze } from '@tolkam/lib-utils';
+import { objectMerge, isPlainObject, objectPath, objectFreezeDeep } from '@tolkam/lib-utils';
 
 const fakeDef = Math.random();
 
@@ -66,7 +66,7 @@ class Configuration {
      */
     public commit(): this {
         if(!this.isCommitted()) {
-            objectDeepFreeze(this.data);
+            objectFreezeDeep(this.data);
         }
 
         return this;
