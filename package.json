@@ -3,6 +3,7 @@
     "description": "Configuration management library",
     "main": "index.ts",
     "license": "UNLICENSED",
+    "version": "0.0.0",
     "dependencies": {
         "@tolkam/lib-utils": "^0.2.0"
     },
